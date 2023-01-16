@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	width: 1440px;
+	margin: 0 auto;
+	background-image: url('images/bg-intro-desktop.png');
+	background-color: hsl(0, 100%, 74%);
+	color: #fff;
+	font-size: 16px;
+	font-family: Poppins, sans-serif;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	gap: 50px;
+}
+
+section {
+	width: 35%;
+}
+
+section h1 {
+	font-size: 2.5rem;
+}
+
+.header {
+	background-color: hsl(248, 32%, 49%);
+	padding: 15px 20px;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0 5px #6666;
+	margin-bottom: 20px;
+}
+
+
+.formcontainer {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 30px;
+}
+
+.formcontainer input {
+	display: block;
+	width: 100%;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: 1px solid #8888;
+	font-weight: 600;
+	color: hsl(246, 25%, 77%);
+	font-size: 0.80rem;
+
+
+}
+
+input:focus {
+	outline: 1px solid #000;
+	color: #000;
+}
+
+.formcontainer button {
+
+	background-color: hsl(154, 59%, 51%);
+	padding: 15px 20px;
+	width: 100%;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	font-weight: 500;
+	font-family: Poppins;
+	border: none;
+	cursor: pointer;
+}
+
+.formcontainer p {
+	color: #8888;
+	font-size: 0.6rem;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.formcontainer a {
+	color: hsl(0, 100%, 74%);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+
+.error {
+	background: url('images/icon-error.svg') no-repeat;
+	background-position: 95% 50%;
+	border: 2px solid hsl(0, 100%, 74%)!important;
+	color: hsl(0, 100%, 74%)!important;
+
+}
+
+.error-txt {
+	color: hsl(0, 100%, 74%);
+	font-size: 0.7rem;
+	margin-top: -20px;
+	text-align: right;
+	margin-bottom: 10px; 
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+	body {
+		width: 375px;
+	}
+
+	section {
+
+		width: 100%;
+	}
+
+	main {
+		flex-direction: column;
+	}
+}

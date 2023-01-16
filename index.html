@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Intro component with sign up form</title>
+
+
+</head>
+<body>
+
+  <main>
+    <section>  <h1>Learn to code by watching others</h1>
+
+  <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+  but understanding how developers think is invaluable. 
+  </p>
+  </section>
+
+    <section>
+
+ <div class="header"><strong>Try it free 7 days</strong> then $20/mo. thereafter</div> 
+ <div class="formcontainer">
+<form id="form" action="">
+  <input id="first" type="text" placeholder="First Name"> 
+  <input id="last" type="text" placeholder="Last Name"> 
+  <input id="email" type="text" placeholder="Email Address">
+  <input id="password" type="password" placeholder="Password">
+  <button type="submit"> Claim your free trial</button>
+  
+
+  <p>By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
+</form>
+
+</div>
+</section>
+
+
+  </main>
+
+<script>
+  const first = document.getElementById('first');
+  const last = document.getElementById('last');
+  const email = document.getElementById('email');
+  const password = document.getElementById('password');
+
+  const form = document.getElementById('form');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    var pattern = '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/';
+
+      if (first.value == '') {
+
+        const html = "<div id='firsterror' class='error-txt'>First Name cannot be empty</div>";
+
+        first.insertAdjacentHTML("afterend", html);
+        first.classList.add('error');
+      }
+
+      else {
+          first.classList.remove('error');
+          document.getElementById('firsterror').remove();
+
+        }
+
+
+      if (last.value == '') {
+
+        const html = "<div id='lasterror' class='error-txt'>Last Name cannot be empty</div>";
+
+        last.insertAdjacentHTML("afterend", html);
+        last.classList.add('error');
+      }
+
+        else {
+          last.classList.remove('error');
+          document.getElementById('lasterror').remove();
+
+        }
+
+      if (email.value == '') {
+
+        const html = "<div id='emailerror' class='error-txt'>Email Name cannot be empty</div>";
+
+        email.insertAdjacentHTML("afterend", html);
+        email.classList.add('error');
+      }
+
+          else {
+
+          if (!email.value.match(pattern)) { 
+        const html = "<div id='emailerror' class='error-txt'>Write proper email</div>";
+          }
+          else {
+          email.classList.remove('error');
+          document.getElementById('emailerror').remove();
+        }
+        }
+
+
+       if (password.value == '') {
+
+        const html = "<div class='error-txt'>Password cannot be empty</div>";
+
+        password.insertAdjacentHTML("afterend", html);
+        password.classList.add('error');
+      }
+
+
+  })
+
+
+
+</script>
+  
+
+</body>
+</html>
